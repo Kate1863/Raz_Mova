@@ -6,7 +6,8 @@ local_settings.py
 .Python build/ 
 develop-eggs/ 
 dist/ 
-downloads/ 
+downloads/
+db.sqlite3
 eggs/ 
 .eggs/ 
 lib/ 
@@ -104,3 +105,4 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+.vscode/settings.json
