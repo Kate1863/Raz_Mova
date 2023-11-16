@@ -1,0 +1,18 @@
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% load custom_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency {{ verb }}</title>
+    {% load custom_tag %}
+</head>
+<body>
+    <h1>Currency Detail</h1>
+    <b>ID:</b> {{ obj.pk }}<br>
+    <b>name:</b> {{ obj.name }}<br>
+    <b>description:</b> {{ obj.description }}<br>
+</body>
+</html>

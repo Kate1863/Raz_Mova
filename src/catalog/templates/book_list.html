@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block title %}Book{% endblock title %}
+{% block body %}
+    <h1>Book List</h1>
+    <div class="row">
+      <div class="col-8">
+      <table class="table caption-top">
+        <caption>Catalog</caption>
+        <thead>
+          <tr>
+            <th scope="col">Cover</th>
+            <th scope="col">Title</th>
+            <th scope="col">Serie</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Price(BYN)</th>
+            <th scope="col">Add to cart</th>
+          </tr>
+        </thead><br>
+        <tbody>
+            <br>
+        {% for object in object_list %}
+          <tr>
+            <td><img src="{{object.cover.url}}" alt="" height =200, weight =100></td>
+            <td><a href="/catalog/book/{{ object.pk}}"> <h2>{{object.title}}</h2></a></td>
+            <td>{{object.serie}}</td>
+            <td>{{object.rating}}</td>
+            <td>{{object.price}}</td>
+            <td><a href="#" class="btn btn-outline-primary">Add to Cart</a></td>
+           </tr>
+          {% endfor %}
+        </tbody>
+        </table>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-2"></div>
+    </div>
+{% endblock body %}

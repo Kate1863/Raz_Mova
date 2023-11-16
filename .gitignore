@@ -2,6 +2,8 @@ __pycache__
 *.py[cod]
 *$py.class
 local_settings.py
+random_number/*
+media/*
 # Distribution / packaging 
 .Python build/ 
 develop-eggs/ 
@@ -21,7 +23,6 @@ wheels/
 *.egg 
 *.manifest 
 *.spec 
-
 # Log files
 pip-log.txt
 pip-delete-this-directory.txt

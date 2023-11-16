@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block title %}Book {{ verb }}{% endblock title %}
+{% block body %}   
+<h1>Book Detail</h1>
+
+
+<div class="card" style="width: 18rem;">
+        <img src="{{object.cover.url}}" class="card-img-top" alt="" height =400, weight =50>
+        <div class="card-body">
+          <h5 class="card-title">{{ object.title }}</h5>
+          <p class="card-text"><b>writer</b> <td>{% for object in object.writer.all %}
+            {{object.name}} <br>
+            {%endfor%}</td>
+        <b>price(BYN)</b> {{ object.price }} <td>{% for object in object.order_currency.all %}
+            {{object.currency}} <br>
+            {%endfor%}</td><br>
+        <b>serie</b> {{ object.serie }}<br>
+        <b>genre</b> <td>{% for object in object.genre.all %}
+            {{object.genre}} <br>
+            {%endfor%}</td>
+        <b>pages</b> {{ object.page }}<br></p>
+          <a href="#" class="btn btn-outline-primary">Add to Cart</a>
+        </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+{% block title %}Order {{ verb }}{% endblock title %}
+{% block body %}
+    <h1>Order was created/updated successfully!</h1>
+
+    <br>
+    <h3>To go to the main page click <a href ="/catalog/ ">HERE</a></h3>
+{% endblock body %}
