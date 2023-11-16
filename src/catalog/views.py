@@ -38,9 +38,6 @@ class BookUpdate(UpdateView):
     form_class = forms.BookModelForm
     success_url = "/catalog/"
 
-#def search(request):
-
-    #query = request.GET.get('q')
 
 def view_home(request):
     return render(request, "")
